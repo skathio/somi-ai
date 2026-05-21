@@ -1,0 +1,48 @@
+{
+  "name": "@skathio/somi-ai",
+  "version": "0.1.0",
+  "description": "SoMi AI — multi-agent engineering workflow system: plan, code, review — with SOLID/OWASP guardrails, deterministic hooks, and a global ruleset.",
+  "keywords": [
+    "workflow",
+    "agents",
+    "planning",
+    "code-review",
+    "security",
+    "owasp",
+    "solid",
+    "clean-code",
+    "engineering",
+    "claude-code",
+    "copilot"
+  ],
+  "author": {
+    "name": "SoMi AI contributors",
+    "url": "https://github.com/skathio/somi-ai"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/skathio/somi-ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skathio/somi-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skathio/somi-ai/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "agents/",
+    "commands/",
+    "skills/",
+    "rules/",
+    "hooks/",
+    "templates/",
+    "examples/",
+    ".claude-plugin/",
+    ".copilot-extension/",
+    ".claude/",
+    "VERSION",
+    "LICENSE"
+  ]
+}

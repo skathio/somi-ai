@@ -1,0 +1,62 @@
+# Phase <N> — <title>
+
+> Work item: [`../spec.md`](../spec.md) • Progress: [`../progress.md`](../progress.md)
+> Status: `not-started` | `in-progress` | `done` | `blocked` | `superseded`
+> Phase order: <N> of <total>  •  Parallel with: <other phase numbers or "none">
+
+A phase is one coherent, reviewable, low-risk increment of the work item. It contains one or more
+**iterations** (each ~1 PR). Iterations within a phase are sequential by default unless explicitly
+parallelizable.
+
+If a constraint or blocker forces this phase's shape to change, update this file in place and
+append a diary entry naming what changed and why. Don't delete the old shape silently.
+
+## Goal
+
+<One sentence: what does completing this phase achieve?>
+
+## Exit criteria
+
+<How do we know the phase is done? Observable and testable.>
+
+- [ ] <criterion 1>
+- [ ] <criterion 2>
+
+## Iterations
+
+### Iteration <N>.1 — <title>
+
+- **Scope**: <what's in this PR>
+- **Files (approx)**: `path/to/foo` (new), `path/to/bar` (modified)
+- **Acceptance**: <criteria — usually a test passes + behavior X visible>
+- **Tests added/changed**: <unit / integration / e2e — brief>
+- **Observability**: <logs / metrics / traces added or changed>
+- **Rollback**: <how to undo if it goes wrong>
+- **Status**: `not-started` | `in-progress` | `done` | `blocked`
+
+### Iteration <N>.2 — <title>
+
+- **Scope**: …
+- **Files (approx)**: …
+- **Acceptance**: …
+- **Tests added/changed**: …
+- **Observability**: …
+- **Rollback**: …
+- **Status**: …
+
+## Dependencies (within this work item)
+
+- **Depends on**: phase(s) that must complete first — list, or "none"
+- **Unblocks**: phase(s) that need this — list, or "none"
+
+## Risk pointers
+
+The work-item-level risk register lives in [`../spec.md`](../spec.md) §11. List here only risks
+**specific to this phase** that aren't captured at the work-item level.
+
+- <phase-specific risk + mitigation>, or "none beyond §11"
+
+## Security / architecture triggers
+
+- **`security-reviewer` consulted in this phase**: `yes` / `no` — reason
+- **`architecture-reviewer` consulted in this phase**: `yes` / `no` — reason

@@ -1,0 +1,44 @@
+{
+  "name": "somi-ai",
+  "displayName": "SoMi AI",
+  "version": "0.1.0",
+  "description": "Multi-agent engineering workflow system: plan, code, review — with SOLID/OWASP guardrails, deterministic hooks, and a global ruleset.",
+  "keywords": [
+    "workflow",
+    "agents",
+    "planning",
+    "code-review",
+    "security",
+    "owasp",
+    "solid",
+    "clean-code",
+    "engineering"
+  ],
+  "author": {
+    "name": "Skathi",
+    "url": "https://github.com/skathio"
+  },
+  "homepage": "https://github.com/skathio/somi-ai",
+  "repository": "https://github.com/skathio/somi-ai",
+  "license": "MIT",
+  "type": "agent",
+  "components": {
+    "agents": "./agents",
+    "commands": "./commands",
+    "skills": "./skills",
+    "hooks": "./hooks"
+  },
+  "rules": "./rules/CLAUDE.md",
+  "commands": [
+    { "name": "plan",            "description": "Generate a structured engineering plan (phases, risks, DoD, test strategy)" },
+    { "name": "code",            "description": "Implement against an approved plan with senior-engineer judgment" },
+    { "name": "review",          "description": "Strict code or plan review with severity-graded findings" },
+    { "name": "ship",            "description": "Full plan → code → review pipeline against a problem statement" },
+    { "name": "plan-review",     "description": "Review a plan before coding begins" },
+    { "name": "security-review", "description": "Security-focused review: auth, crypto, input validation, injection risks" },
+    { "name": "refactor",        "description": "Untangle complex code before patching antipatterns" }
+  ],
+  "compatibility": {
+    "copilot": ">=1.0.0"
+  }
+}

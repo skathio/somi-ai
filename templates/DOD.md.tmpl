@@ -1,0 +1,66 @@
+# Definition of Done — <feature / change name>
+
+`spec.md` §12 already contains the per-work-item Definition of Done. This template is for cases
+where you want a **standalone** DoD outside the SoMi `.somi/<slug>/` artifact set (e.g., a
+team-level "shipping standard" checklist). For most work items, fill out §12 of `spec.md`
+directly and ignore this file.
+
+## Functional
+
+- [ ] All planned iterations landed (per `phases/`).
+- [ ] Acceptance criteria from each iteration met.
+- [ ] Manual verification of golden path completed.
+- [ ] Edge cases identified during planning are exercised.
+
+## Tests
+
+- [ ] Unit tests added/updated for changed logic.
+- [ ] Integration tests cover the new seam(s).
+- [ ] E2E updated if a user-visible journey changed.
+- [ ] CI is green on the branch.
+- [ ] No skipped/quarantined tests added in this change.
+
+## Code review
+
+- [ ] `/review` run; no unresolved Blockers or Majors in `.somi/<slug>/reviews/`.
+- [ ] `security-reviewer` consulted if `spec.md` §8 flagged it.
+- [ ] `architecture-reviewer` consulted if a new contract / module / service was introduced.
+
+## Security
+
+- [ ] OWASP categories from `spec.md` §8 addressed in code (not deferred).
+- [ ] Secrets handled via the project's secret manager (not committed, not logged).
+- [ ] AuthN/AuthZ checks present at every new ingress.
+- [ ] Input validation at trust boundaries.
+- [ ] No new sinks reachable from untrusted input without explicit mitigation.
+
+## Observability
+
+- [ ] Logs from `spec.md` §9 emit on the relevant paths.
+- [ ] Metrics from `spec.md` §9 registered; no high-cardinality labels.
+- [ ] Traces propagated across any new RPC/queue hops.
+- [ ] Alerts (if any) have runbooks linked.
+
+## Rollout
+
+- [ ] Feature flag (if any) defaults to safe value.
+- [ ] Deploy plan from `spec.md` §10 followed.
+- [ ] Success metric green for <stated window>.
+- [ ] Rollback path verified (at least dry-runnable).
+
+## Documentation
+
+- [ ] User-facing docs updated where behavior changed.
+- [ ] Internal architecture docs updated where structure changed.
+- [ ] ADR written if a structural decision was made.
+
+## Hygiene
+
+- [ ] No leftover `TODO(claude)` / `FIXME(claude)` without a follow-up issue.
+- [ ] No commented-out code, debug prints, or scratch files in the diff.
+- [ ] Follow-ups filed (linked below).
+
+## Follow-ups filed
+
+- [<#NNN> — <one-line>](#)
+- [<#NNN> — <one-line>](#)
