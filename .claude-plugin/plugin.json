@@ -20,16 +20,5 @@
   },
   "homepage": "https://github.com/skathio/somi-ai",
   "repository": "https://github.com/skathio/somi-ai",
-  "license": "MIT",
-  "components": {
-    "agents": "./agents",
-    "commands": "./commands",
-    "skills": "./skills",
-    "hooks": "./hooks"
-  },
-  "settings": "./.claude/settings.json",
-  "claudeMd": "./rules/CLAUDE.md",
-  "compatibility": {
-    "claudeCode": ">=1.0.0"
-  }
+  "license": "MIT"
 }
