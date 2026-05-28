@@ -1,6 +1,6 @@
-# CI caller: delegates to skathio/hashira-ops npm-package-ci reusable workflow.
+# CI caller: delegates to skathio/hashira npm-package-ci reusable workflow.
 # Runs lint (commitlint non-blocking) + test (validate script) + scan-suite + coverage-report.
-# See https://github.com/skathio/hashira-ops/blob/main/docs/flows/npm.md for full adoption guide.
+# See https://github.com/skathio/hashira/blob/main/docs/flows/npm.md for full adoption guide.
 
 name: ci
 
@@ -15,7 +15,7 @@ permissions: {}
 
 jobs:
   ci:
-    uses: skathio/hashira-ops/.github/workflows/npm-package-ci.yml@v1
+    uses: skathio/hashira/.github/workflows/npm-package-ci.yml@v1
     # Per-job grants must mirror the matrix in docs/flows/npm.md §5.
     # Reusable workflows can only narrow the caller's grants, not broaden them.
     permissions:
