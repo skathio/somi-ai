@@ -26,6 +26,8 @@ jobs:
       node_version: '20'
       test_command: 'npm test'
       coverage_path: 'coverage/lcov.info'
-      # codeql and actionlint disabled by default; osv + gitleaks + dependency-review run.
-      scan_disable: 'codeql,actionlint'
+      # All scans disabled: scan-suite uses nested local `uses:` paths that resolve
+      # against the consumer's workspace root, not the .hashira/ checkout path (D14
+      # limitation in hashira). Re-enable once hashira fixes nested path resolution.
+      scan_disable: 'codeql,actionlint,osv,gitleaks,dependency-review'
       library_ref: 'v1'
